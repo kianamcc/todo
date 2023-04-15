@@ -1,0 +1,139 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #faf3dd;
+}
+
+/* 22:10 youtube */
+
+:root {
+  --primary: #ea40a4;
+  --top-priority: var(--primary);
+  --low-priority: #3a82ee;
+  --light: #eee;
+  --dark: #313154;
+  --grey: #888;
+  --danger: #ff5b57;
+  --green: #c8d5b9;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --top-priority-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+  --low-priority-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: initial;
+}
+
+input {
+  font-size: 1rem;
+}
+
+body {
+  color: var(--dark);
+}
+
+h2,
+.username {
+  font-size: 2rem;
+}
+
+h3 {
+  color: var(--dark);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  color: var(--grey);
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.greeting {
+  background-color: var(--green);
+}
+
+.heading {
+  padding: 1.5rem;
+}
+
+.heading input {
+}
+
+.todo-container {
+  margin: 25px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todo-content {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 50vw;
+  padding: 15px 0px;
+  box-shadow: var(--shadow);
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+}
+
+input[type="text"] {
+  text-indent: 0.5rem;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.priority-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.priority-options label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
