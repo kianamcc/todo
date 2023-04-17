@@ -6,14 +6,15 @@ body {
 /* 22:10 youtube */
 
 :root {
-  --primary: #ea40a4;
+  --primary: #ed6a5a;
   --top-priority: var(--primary);
-  --low-priority: #3a82ee;
+  --low-priority: #68b0ab;
   --light: #eee;
   --dark: #313154;
   --grey: #888;
   --danger: #ff5b57;
   --green: #c8d5b9;
+  --blue: #68b0ab;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   --top-priority-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
   --low-priority-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
@@ -55,6 +56,12 @@ h2,
   font-size: 2rem;
 }
 
+.username {
+  border: none;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
 h3 {
   color: var(--dark);
   font-size: 1rem;
@@ -75,10 +82,16 @@ h3 {
 
 .heading {
   padding: 1.5rem;
+  display: flex;
+  gap: 5px;
 }
 
 .todo-container {
   margin: 25px;
+}
+
+.todo-box {
+  border: none;
 }
 
 .todo-list {
@@ -99,10 +112,22 @@ h3 {
   background-color: #fff;
   box-shadow: var(--shadow);
   padding: 0px 10px;
+  gap: 5px;
 }
 
 .todo-content {
   flex: 1 1 0%;
+}
+
+.todo-input {
+  width: 100%;
+  text-decoration: none;
+  border: none;
+}
+
+.todo-input.done {
+  text-decoration: line-through;
+  color: var(--grey);
 }
 
 input[type="text"] {
@@ -213,6 +238,30 @@ input:checked ~ .priority::after {
 }
 
 .add-todo-btn:hover {
+  opacity: 0.7;
+}
+
+.delete-btn {
+  padding: 0.5rem 0.75rem;
+  background-color: var(--danger);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border: none;
+}
+
+.edit-btn {
+  padding: 0.5rem 0.75rem;
+
+  background-color: var(--green);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border: none;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
   opacity: 0.7;
 }
 
